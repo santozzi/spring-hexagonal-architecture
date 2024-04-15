@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: java-hexgona-apirest
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: ${DB_HOST}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+server:
+  port: 8080
